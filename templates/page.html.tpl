@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TNQCGQSW');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposaly Inbound Agent – {{NAME}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0f14;
+      --surface:  #161921;
+      --border:   #252932;
+      --accent:   #5b6af5;
+      --accent2:  #a78bfa;
+      --text:     #e8eaf0;
+      --muted:    #6b7280;
+      --green:    #34d399;
+      --red:      #f87171;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+    header span {
+      font-family: 'Syne', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: var(--text);
+    }
+    .back {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .back:hover { color: var(--text); }
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(91,106,245,.12);
+      border: 1px solid rgba(91,106,245,.3);
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 80px 40px 60px;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+      margin-bottom: 20px;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ── Status grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .card-value {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot.green  { background: var(--green);  box-shadow: 0 0 6px var(--green); }
+    .dot.purple { background: var(--accent2); box-shadow: 0 0 6px var(--accent2); }
+    .dot.blue   { background: var(--accent);  box-shadow: 0 0 6px var(--accent); }
+    .card-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ── Code block ── */
+    .code-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+    .code-section h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--muted);
+      letter-spacing: .02em;
+    }
+    pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      overflow-x: auto;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #c9d1d9;
+    }
+    .tag    { color: #7dd3fc; }
+    .attr   { color: #a78bfa; }
+    .val    { color: #86efac; }
+    .cmt    { color: #4b5563; font-style: italic; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      padding: 20px 40px;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header, .hero, .grid, .code-section, footer { padding-left: 20px; padding-right: 20px; }
+      .hero { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNQCGQSW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="logo-dot"></div>
+    <span>Proposaly · Inbound Agent</span>
+    <a class="back" href="../">← Tất cả trang</a>
+    <span class="badge">Test Env</span>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">QA Test Page · {{NAME}}</p>
+    <h1>Widget <em>đang chạy</em><br>trên trang này</h1>
+    <p>Trang này dùng để kiểm tra Proposaly Inbound Agent nhúng qua thẻ <code style="color:var(--accent2)">&lt;script&gt;</code>. Mở góc phải màn hình để thấy widget.</p>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Trạng thái widget</div>
+      <div class="card-value"><span class="dot green"></span>Đã load</div>
+      <div class="card-sub">Script async/defer từ test-cdn</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Bot ID</div>
+      <div class="card-value" style="font-size:13px; font-family:'Inter'; word-break:break-all; color:var(--accent2)">{{BOT_ID_SHORT}}…</div>
+      <div class="card-sub">data-bot-id</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Môi trường</div>
+      <div class="card-value"><span class="dot blue"></span>GitHub Pages</div>
+      <div class="card-sub">Hosting miễn phí</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Domain</div>
+      <div class="card-value" style="font-size:14px"><span class="dot purple"></span>*.github.io</div>
+      <div class="card-sub">Không cần mua domain</div>
+    </div>
+  </div>
+
+  <div class="code-section">
+    <h2>Đoạn script đang nhúng</h2>
+    <pre><span class="cmt">&lt;!-- Proposaly Bot Widget --&gt;</span>
+<span class="tag">&lt;script</span>
+  <span class="attr">src</span>=<span class="val">"{{SRC}}"</span>
+  <span class="attr">data-bot-id</span>=<span class="val">"{{BOT_ID}}"</span>
+  <span class="attr">async</span> <span class="attr">defer</span>
+<span class="tag">&gt;&lt;/script&gt;</span></pre>
+  </div>
+
+  <footer>
+    <span>Proposaly QA Team</span>
+    <span>{{SRC_HOST}} · Inbound Agent</span>
+  </footer>
+
+ <!-- Proposaly Bot Widget -->
+<script
+  src="{{SRC}}"
+  data-bot-id="{{BOT_ID}}"
+  async defer
+></script>
+  
+
+</body>
+</html>
