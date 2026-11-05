@@ -8,7 +8,7 @@ Static test pages for Proposaly inbound agents, hosted free on GitHub Pages.
 ## Add a page
 
 ```bash
-./new-page.sh <page-name> <bot-id> [script-src]
+./new-page.sh <page-name> <bot-id> "<agent-name>" [script-src]
 git add . && git commit -m "Add <page-name> test page" && git push
 ```
 

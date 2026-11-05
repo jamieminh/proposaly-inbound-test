@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +21,7 @@
     li a { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px 24px; color:var(--text); text-decoration:none; font-weight:600; }
     li a:hover { border-color:var(--accent); }
     li code { color:var(--accent2); font-size:12px; font-weight:400; word-break:break-all; }
+    li small { display:block; color:var(--muted); font-size:12px; font-weight:400; margin-top:4px; }
     footer { margin-top:auto; border-top:1px solid var(--border); padding:20px 40px; font-size:12px; color:var(--muted); }
     @media (max-width:600px) { header, main, footer { padding-left:20px; padding-right:20px; } main { padding-top:40px; } }
   </style>
@@ -33,10 +34,10 @@
   </header>
   <main>
     <h1>Inbound Agent Test Pages</h1>
-    <p>Mỗi trang nhúng một inbound agent riêng. Mở trang để kiểm tra widget.</p>
+    <p>Each page embeds a different inbound agent. Open a page to test its widget.</p>
     <ul>
       <!-- PAGES:START -->
-      <li><a href="pages/inbound-1.html">inbound-1 <code>kn4MQKccqNecgPd-oCCDGYL57Ti1weLFWlUV8hzvXSI</code></a></li>
+      <li><a href="pages/inbound-1.html"><span>Jamie Microsoft and Supportly<small>pages/inbound-1.html</small></span><code>kn4MQKccqNecgPd-oCCDGYL57Ti1weLFWlUV8hzvXSI</code></a></li>
       <!-- PAGES:END -->
     </ul>
   </main>

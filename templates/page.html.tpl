@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TNQCGQSW');</script>
-<!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Proposaly Inbound Agent – {{NAME}}</title>
+  <title>{{AGENT}} – Proposaly Inbound Agent Test</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
   <style>
@@ -209,48 +202,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNQCGQSW"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
   <header>
     <div class="logo-dot"></div>
     <span>Proposaly · Inbound Agent</span>
-    <a class="back" href="../">← Tất cả trang</a>
+    <a class="back" href="../">← All pages</a>
     <span class="badge">Test Env</span>
   </header>
 
   <section class="hero">
-    <p class="eyebrow">QA Test Page · {{NAME}}</p>
-    <h1>Widget <em>đang chạy</em><br>trên trang này</h1>
-    <p>Trang này dùng để kiểm tra Proposaly Inbound Agent nhúng qua thẻ <code style="color:var(--accent2)">&lt;script&gt;</code>. Mở góc phải màn hình để thấy widget.</p>
+    <p class="eyebrow">QA Test Page · {{AGENT}}</p>
+    <h1>Widget <em>is running</em><br>on this page</h1>
+    <p>This page tests a Proposaly Inbound Agent embedded via a <code style="color:var(--accent2)">&lt;script&gt;</code> tag. Open the widget in the bottom-right corner.</p>
   </section>
 
   <div class="grid">
     <div class="card">
-      <div class="card-label">Trạng thái widget</div>
-      <div class="card-value"><span class="dot green"></span>Đã load</div>
-      <div class="card-sub">Script async/defer từ test-cdn</div>
+      <div class="card-label">Agent</div>
+      <div class="card-value"><span class="dot purple"></span>{{AGENT}}</div>
+      <div class="card-sub">Inbound agent name</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Widget status</div>
+      <div class="card-value"><span class="dot green"></span>Loaded</div>
+      <div class="card-sub">Script async/defer from {{SRC_HOST}}</div>
     </div>
     <div class="card">
       <div class="card-label">Bot ID</div>
       <div class="card-value" style="font-size:13px; font-family:'Inter'; word-break:break-all; color:var(--accent2)">{{BOT_ID_SHORT}}…</div>
       <div class="card-sub">data-bot-id</div>
     </div>
-    <div class="card">
-      <div class="card-label">Môi trường</div>
-      <div class="card-value"><span class="dot blue"></span>GitHub Pages</div>
-      <div class="card-sub">Hosting miễn phí</div>
-    </div>
-    <div class="card">
-      <div class="card-label">Domain</div>
-      <div class="card-value" style="font-size:14px"><span class="dot purple"></span>*.github.io</div>
-      <div class="card-sub">Không cần mua domain</div>
-    </div>
   </div>
 
   <div class="code-section">
-    <h2>Đoạn script đang nhúng</h2>
+    <h2>Embedded script</h2>
     <pre><span class="cmt">&lt;!-- Proposaly Bot Widget --&gt;</span>
 <span class="tag">&lt;script</span>
   <span class="attr">src</span>=<span class="val">"{{SRC}}"</span>
